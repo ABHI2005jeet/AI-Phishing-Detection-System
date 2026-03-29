@@ -1,34 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Model Metrics</title>
+
+<title>Sentinel AI - Detection Analytics</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 
-<body style="background:#111;color:white;">
-
-<nav class="navbar navbar-dark bg-dark">
-<div class="container-fluid">
-<a class="navbar-brand" href="/">Sentinel AI</a>
-<a class="btn btn-outline-light" href="/">Scanner</a>
-</div>
-</nav>
+<body style="background:#f5f7fa;">
 
 <div class="container mt-5">
 
-<div class="card bg-dark p-4">
+<h2 class="text-center mb-4">Sentinel AI – Detection Analytics</h2>
 
-<h3>Model Performance</h3>
+<div class="card shadow p-4 mb-4">
 
-<p>Accuracy: ~99% (dataset still phishing-heavy)</p>
-<p>Legit Precision: 0.89</p>
-<p>Legit Recall: 0.88</p>
-<p>Phishing Precision: 0.99</p>
-<p>Phishing Recall: 0.99</p>
+<h4>System Features</h4>
 
-<hr>
+<ul>
 
-<p>Future improvement: Add more legitimate corporate emails to balance dataset further.</p>
+<li>Email Phishing Detection using Machine Learning</li>
+<li>URL Phishing Detection using Machine Learning</li>
+<li>Rule-Based Phishing Detection Engine</li>
+<li>URL Structural Feature Analysis</li>
+<li>Hybrid Threat Scoring Model</li>
+<li>Explainable AI Risk Signals</li>
+<li>Threat Intelligence Integration (PhishTank)</li>
+<li>Detection Dashboard with Analytics</li>
+<li>Scan History Tracking</li>
+<li>Interactive Web Scanning Interface</li>
+
+</ul>
+
+</div>
+
+<div class="card shadow p-4 mb-4">
+
+<h4>Research Inspiration</h4>
+
+<p>This project draws inspiration from the following research papers:</p>
+
+<ul>
+
+<li>
+<b>An Intelligent Phishing Email Detection System Using Ensemble Methods and Explainable AI</b>
+<br>
+
+<a href="https://www.researchgate.net/publication/400279179_An_Intelligent_Phishing_Email_Detection_System_Using_Ensemble_Methods_and_Explainable_AI"
+target="_blank">
+
+View Paper
+
+</a>
+
+<br>
+
+Concepts adopted:
+
+<ul>
+<li>Machine learning based phishing email detection</li>
+<li>Explainable AI for phishing classification</li>
+<li>Hybrid detection architecture</li>
+</ul>
+
+</li>
+
+<br>
+
+<li>
+
+<b>Phishing Website Detection Using URL Features and Machine Learning</b>
+
+<br>
+
+<a href="https://www.researchgate.net/"
+target="_blank">
+
+Reference Research on URL-based phishing detection
+
+</a>
+
+<br>
+
+Concepts adopted:
+
+<ul>
+<li>Structural URL feature extraction</li>
+<li>Machine learning classification of phishing URLs</li>
+<li>URL-based phishing indicators</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="card shadow p-4 mb-4">
+
+<h4>Custom Enhancements (Our Implementation)</h4>
+
+<ul>
+
+<li>Separate ML models for Email and URL detection</li>
+<li>Hybrid weighted threat scoring system</li>
+<li>Integration with real-world Threat Intelligence APIs</li>
+<li>Explainable detection signals for better interpretability</li>
+<li>Interactive monitoring dashboard using Chart.js</li>
+<li>Real-time scan history tracking</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="card shadow p-4 mb-4">
+
+<h4>Future Improvements</h4>
+
+<p>The following upgrades could significantly enhance the system:</p>
+
+<ul>
+
+<li>Deep learning based phishing detection (BERT / Transformers)</li>
+<li>Real-time phishing feed integration (OpenPhish, VirusTotal)</li>
+<li>Browser extension for real-time phishing detection</li>
+<li>Email file scanning support (.eml analysis)</li>
+<li>Domain reputation and WHOIS analysis</li>
+<li>Advanced SOC-style monitoring dashboard</li>
+
+</ul>
+
+</div>
+
+
+<div class="text-center mt-4">
+
+<a href="/" class="btn btn-primary">Back to Scanner</a>
 
 </div>
 

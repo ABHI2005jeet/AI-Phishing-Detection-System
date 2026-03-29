@@ -3,6 +3,7 @@
 <head>
     <title>Sentinel AI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body style="background:linear-gradient(135deg,#1f4037,#99f2c8);min-height:100vh;">
 
@@ -12,7 +13,7 @@
         <div>
             <a class="btn btn-outline-light me-2" href="/">Scanner</a>
             <a class="btn btn-outline-warning me-2" href="/dashboard">Dashboard</a>
-            <a class="btn btn-outline-info" href="/metrics">Model Metrics</a>
+           <a class="btn btn-outline-info" href="/metrics">Detection Analytics</a>
         </div>
     </div>
 </nav>
@@ -36,15 +37,31 @@
 <label class="form-check-label">Scan URL Only</label>
 </div>
 
-<textarea class="form-control mb-3" name="text" rows="4"
+<textarea class="form-control mb-3" name="text" rows="5"
 placeholder="Paste text or URL here..." required></textarea>
 
-<button type="submit" class="btn btn-primary w-100">Analyze</button>
+<button type="submit" class="btn btn-primary w-100">
+🔍 Analyze Threat
+</button>
 
 </form>
 
 </div>
 </div>
+<script>
+const radios = document.querySelectorAll('input[name="scan_type"]');
+const textarea = document.querySelector('textarea');
 
+radios.forEach(radio => {
+radio.addEventListener('change', () => {
+if(radio.value === "url"){
+textarea.placeholder = "Paste suspicious URL here...";
+}
+else{
+textarea.placeholder = "Paste email or SMS message here...";
+}
+});
+});
+</script>
 </body>
 </html>

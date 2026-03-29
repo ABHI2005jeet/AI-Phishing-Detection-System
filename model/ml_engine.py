@@ -1,18 +1,19 @@
-import joblib
-import numpy as np
+import joblib # type: ignore
 
 model = joblib.load("model/phishing_model.pkl")
 vectorizer = joblib.load("model/vectorizer.pkl")
 
-# Adjustable threshold (upgrade 5)
-THRESHOLD = 0.55  
+THRESHOLD = 0.55
 
 def ml_score(text):
     text_vec = vectorizer.transform([text])
     prob = model.predict_proba(text_vec)[0][1]
 
-    # Apply threshold tuning
+    score = round(prob * 100, 2)
+
     if prob >= THRESHOLD:
-        return round(prob * 100, 2)
+        label = "phishing"
     else:
-        return round(prob * 100, 2)
+        label = "legitimate"
+
+    return label, score

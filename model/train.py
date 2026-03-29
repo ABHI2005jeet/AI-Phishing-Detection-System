@@ -1,18 +1,18 @@
-import pandas as pd
-import numpy as np
-import joblib
+import pandas as pd # type: ignore
+import numpy as np# type: ignore
+import joblib# type: ignore
 
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.calibration import CalibratedClassifierCV
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split# type: ignore
+from sklearn.feature_extraction.text import TfidfVectorizer# type: ignore
+from sklearn.linear_model import LogisticRegression# type: ignore
+from sklearn.calibration import CalibratedClassifierCV# type: ignore
+from sklearn.metrics import classification_report, confusion_matrix# type: ignore
 
 # =========================
 # LOAD DATA
 # =========================
 
-df = pd.read_csv("data/combined_dataset.csv")
+df = pd.read_csv("data/email_dataset.csv")
 
 print("Columns:", df.columns)
 
